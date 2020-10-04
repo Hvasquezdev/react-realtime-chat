@@ -1,7 +1,7 @@
 import React from 'react';
-import firebase from 'firebase/app';
+import { firebase, auth } from '../services/firebase';
 
-const auth = firebase.auth();
+import { BaseButton } from './BaseButton';
 
 export const SignIn = () => {
   const signInWithGoogle = () => {
@@ -9,5 +9,7 @@ export const SignIn = () => {
     auth.signInWithPopup(provider);
   };
 
-  return <button onClick={signInWithGoogle}>Sign in with Google</button>;
-}
+  return (
+    <BaseButton onClick={signInWithGoogle}>Sign in with Google</BaseButton>
+  );
+};
