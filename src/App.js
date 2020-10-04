@@ -110,12 +110,16 @@ function ChatRoom() {
   const [messages] = useCollectionData(query, { idField: 'id' });
   const [message, setMessage] = useState('');
 
+  const updateScroll = () => {
+    dummy.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const sendMessage = async (e) => {
     e.preventDefault();
 
     const text = message.trim();
 
-    if (!message) {
+    if (!message.length) {
       return;
     }
 
@@ -132,8 +136,6 @@ function ChatRoom() {
       uid,
       photoURL: photoURL || photoPlaceholder,
     });
-
-    dummy.current.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -149,6 +151,7 @@ function ChatRoom() {
                 message={msg}
                 before={beforeMessageId}
                 user={auth.currentUser}
+                updateScroll={updateScroll}
               />
             );
           })}
