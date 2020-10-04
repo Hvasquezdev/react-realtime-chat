@@ -1,0 +1,80 @@
+.chat-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  background: var(--color-7);
+  width: 100%;
+}
+
+.chat-form::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 0;
+  height: 2px;
+  background: var(--color-8);
+}
+
+.chat-form input {
+  flex: 1;
+  color: var(--color-4);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  padding: 20px 0;
+  outline: none;
+  border: none;
+}
+
+.chat-form input:active,
+.chat-form input:focus {
+  outline: none;
+}
+
+.chat-form input::-webkit-input-placeholder {
+  color: var(--color-4);
+  opacity: 0.5;
+}
+.chat-form input::-moz-placeholder {
+  color: var(--color-4);
+  opacity: 0.5;
+}
+.chat-form input:-ms-input-placeholder {
+  color: var(--color-4);
+  opacity: 0.5;
+}
+.chat-form input::-ms-input-placeholder {
+  color: var(--color-4);
+  opacity: 0.5;
+}
+.chat-form input::placeholder {
+  color: var(--color-4);
+  opacity: 0.5;
+}
+
+.chat-form button {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  padding: 0;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .chat-form {
+    padding: 10px 60px;
+  }
+  
+  .chat-form::before {
+    left: 60px;
+    right: 60px;
+  }
+
+  .chat-form input {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

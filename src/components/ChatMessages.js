@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import '../assets/css/ChatMessages.css';
 import { auth } from '../services/firebase';
 
 import { ChatMessage } from './ChatMessage';

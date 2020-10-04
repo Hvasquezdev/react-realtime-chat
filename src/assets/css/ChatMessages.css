@@ -1,0 +1,18 @@
+.messages-list {
+  padding: 30px 30px;
+  background-color: var(--color-7);
+  flex: 1;
+  width: 100%;
+  max-height: calc(100vh - 194px);
+  overflow-y: scroll;
+}
+
+.messages-list > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .messages-list {
+    padding: 30px 60px;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../assets/css/ChatMessagesForm.css';
 import { auth, firebase } from '../services/firebase';
 
 import { ArrowIcon } from './ArowIcon';
