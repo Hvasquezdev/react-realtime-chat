@@ -1,0 +1,54 @@
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.chat-message .user-thumb {
+  border-radius: 100%;
+  box-shadow: 4px 4px 15px rgba(154, 81, 48, 0.05),
+    2px 2px 10px rgba(154, 81, 48, 0.1), 1px 1px 50px rgba(154, 81, 48, 0.15);
+  margin-right: 24px;
+}
+
+.chat-message .message-text {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 500;
+  color: var(--color-7);
+  padding: 16px 22px;
+  text-align: left;
+  border-radius: 10px 10px 10px 10px;
+  background: rgb(96,169,246);
+  background: -moz-linear-gradient(120deg, rgba(96,169,246,1) 0%, rgba(42,139,242,1) 100%);
+  background: -webkit-linear-gradient(120deg, rgba(96,169,246,1) 0%, rgba(42,139,242,1) 100%);
+  background: linear-gradient(120deg, rgba(96,169,246,1) 0%, rgba(42,139,242,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#60a9f6",endColorstr="#2a8bf2",GradientType=1);
+}
+
+.chat-message.same-owner .user-thumb {
+  opacity: 0;
+}
+
+.chat-message.same-owner .message-text {
+  border-radius: 0px 10px 10px 10px;
+}
+
+.chat-message.sent {
+  justify-content: flex-end;
+}
+
+.chat-message.sent .user-thumb {
+  order: 1;
+  margin-right: 0;
+  margin-left: 24px;
+}
+
+.chat-message.sent .message-text {
+  color: var(--color-4);
+  text-align: right;
+  border-radius: 10px 10px 0px 10px;
+  border: 1px solid rgb(112, 124, 151, 0.25);
+  background: var(--color-7);
+}
