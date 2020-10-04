@@ -113,11 +113,12 @@ function ChatRoom() {
   const sendMessage = async (e) => {
     e.preventDefault();
 
+    const text = message.trim();
+
     if (!message) {
       return;
     }
 
-    const text = message;
     const { uid, photoURL, email } = auth.currentUser;
     const photoPlaceholder = `https://avatars.dicebear.com/api/initials/${email.charAt(
       0
