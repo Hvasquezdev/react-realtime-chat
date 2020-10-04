@@ -119,7 +119,7 @@ function ChatRoom() {
 
     const text = message.trim();
 
-    if (!message.length) {
+    if (!text.length) {
       return;
     }
 
